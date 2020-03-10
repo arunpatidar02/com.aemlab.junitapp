@@ -1,6 +1,6 @@
 # Sample AEM project template
 
-This is a sample project to contribute AEM Junit test. Also It is intended as a best-practice set of examples as well as a potential starting point to develop your own functionality.
+This is a sample project to contribute AEM Junit testing knowledge. Also It is intended as a best-practice set of examples as well as a potential starting point to develop your own functionality.
 
 ## Modules
 
