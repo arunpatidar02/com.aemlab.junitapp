@@ -1,0 +1,5 @@
+[
+    {"text": "Default","value": "none"},
+    {"text": "Same Window","value": "_self"},
+    {"text": "New Window","value": "_blank"}
+]

@@ -1,0 +1,12 @@
+<div data-sly-use.map="com.aemlab.junit.core.models.GoogleMapModel" 
+	 data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-test.hasContent="${map.location}">
+	<iframe class="cmp-googlemap"
+		height="100%"
+		width="100%"
+		src="${map.googleMapURI @ context='attribute'}"
+		frameborder="0"
+		allowfullscreen>
+	</iframe>
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty=!hasContent, classAppend='cmp-googlemap'}"></sly>

@@ -1,0 +1,12 @@
+<div data-sly-use.download="com.aemlab.junit.core.models.Download"
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-test.hasContent="${download.label}"
+    class="cmp-download-item">
+    <span class="icon__link-download"></span>
+    <a class="cmp-download__link"
+        href="${download.href}"
+        title="${download.title}"
+        >${download.label}
+    </a>
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty=!hasContent, classAppend='cmp-download-item'}"></sly>

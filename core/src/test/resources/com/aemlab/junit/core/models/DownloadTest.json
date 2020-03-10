@@ -1,0 +1,19 @@
+{
+	"jcr:primaryType": "cq:Page",
+	"jcr:content": {
+		"jcr:primaryType": "cq:PageContent",
+		"jcr:title": "English",
+		"root": {
+			"jcr:primaryType": "nt:unstructured",
+			"sling:resourceType": "wcm/foundation/components/responsivegrid",
+			"responsivegrid": {
+				"jcr:primaryType": "nt:unstructured",
+				"download": {
+					"label": "Click here to download",
+					"href": "/content/dam/JunitApp/cover.pdf",
+					"title": "Title"
+				}
+			}
+		}
+	}
+}

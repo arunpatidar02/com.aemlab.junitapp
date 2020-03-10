@@ -1,0 +1,29 @@
+{
+   "jcr:primaryType":"cq:Page",
+   "jcr:content":{
+      "jcr:primaryType":"cq:PageContent",
+      "cq:template": "/conf/JunitApp/settings/wcm/templates/content-page-template",
+      "jcr:title":"English",
+      "root":{
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"wcm/foundation/components/responsivegrid",
+         "responsivegrid":{
+            "jcr:primaryType":"nt:unstructured",
+            "jcr:lastModifiedBy":"admin",
+            "sling:resourceType":"wcm/foundation/components/responsivegrid",
+            "links":{
+               "jcr:primaryType":"nt:unstructured",
+               "icon":{
+                  "jcr:primaryType":"nt:unstructured",
+                  "sling:resourceType": "JunitApp/components/content/icon",
+                  "lnLabel":"Link Label",
+                  "lnHref": "/content/JunitApp",
+                  "lnTarget":"none",
+                  "lnTitle":"Link Title",
+                  "icon":"icon-home"
+               }
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,17 @@
+<div data-sly-use.cta="com.aemlab.junit.core.models.LinkModel"
+    data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+    data-sly-test.hasContent="${cta.lnLabel}"
+    class="cmp-link">
+    <sly>
+        <sly data-sly-call="${link @ link=cta}"></sly>
+    </sly>
+    <sly data-sly-template.link="${@ link}">
+        <a class="cmp-cta__link"
+           href="${link.lnHref}"
+           title="${link.lnTitle}"
+           target="${link.lnTarget}">
+           ${link.lnLabel}
+        </a>
+    </sly>
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty=!hasContent, classAppend='cmp-link'}"></sly>

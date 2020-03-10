@@ -1,0 +1,36 @@
+{
+   "jcr:primaryType":"cq:Page",
+   "jcr:content":{
+      "jcr:primaryType":"cq:PageContent",
+      "jcr:title":"English",
+      "root":{
+         "jcr:primaryType":"nt:unstructured",
+         "sling:resourceType":"wcm/foundation/components/responsivegrid",
+         "responsivegrid":{
+            "jcr:primaryType":"nt:unstructured",
+            "teaser":{
+               "jcr:title":"Test Teaser",
+               "fileReference":"/content/dam/core-components-examples/library/sample-assets/lava-into-ocean.jpg",
+               "actionsEnabled":"true",
+               "titleFromPage":"false",
+               "imgPos":"teaser-img-right",
+               "jcr:description":"Teaser Description",
+               "descriptionFromPage":"false",
+               "actions":{
+                  "jcr:primaryType":"nt:unstructured",
+                  "item0":{
+                     "jcr:primaryType":"nt:unstructured",
+                     "link":"/content/campaigns",
+                     "text":"Campaigns"
+                  },
+                  "item1":{
+                     "jcr:primaryType":"nt:unstructured",
+                     "link":"/content/sites",
+                     "text":"Community Sites"
+                  }
+               }
+            }
+         }
+      }
+   }
+}
