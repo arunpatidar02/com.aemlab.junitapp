@@ -73,12 +73,21 @@ class ModelHelperTest {
     }
     
     @Test
-    void testNonNullDesign() {
+    void testNullDesign() {
     	context.load().json(ModelHelperTest.class.getResourceAsStream("IconLinkModelTest.json"),JunitAppConstants.TEST_PAGE_ROOT2);
     	context.load().json(ModelHelperTest.class.getResourceAsStream("IconLinkDesign.json"),WCM_PATH);
         Resource componentResource = context.resourceResolver().getResource(JunitAppConstants.TEST_CONTENT_ROOT2 + "/links/icon");
         String iconSize = ModelHelper.getDesignPropertyValue(componentResource, ICON_SIZE_PROPERTY, "icon-sm");
         assertEquals("icon-sm", iconSize);
     }
+    
+   /* @Test
+    void testNonNullDesign() {
+    	context.contentPolicyMapping("JunitApp/components/content/icon",ICON_SIZE_PROPERTY, "icon-md");
+    	Resource componentResource = context.resourceResolver().getResource(JunitAppConstants.TEST_CONTENT_ROOT2 + "/links/icon");
+        String iconSize = ModelHelper.getDesignPropertyValue(componentResource, ICON_SIZE_PROPERTY, "icon-sm");
+        assertEquals("icon-md", iconSize);
+    }*/
+
     
 }

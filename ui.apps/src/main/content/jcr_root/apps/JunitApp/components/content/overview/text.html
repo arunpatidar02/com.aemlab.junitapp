@@ -1,0 +1,8 @@
+<sly data-sly-template.text="${@ overview}">
+    <div class="cmp-overview__txt" data-sly-test="${overview.heading || overview.description}">
+		<h2 class="cmp-overview__text__heading" data-sly-test.heading="${overview.heading}">${heading}</h2>
+        <div class="cmp-overview__text__description" data-sly-test.description="${overview.description}">
+        	${description @ context='html'}
+        </div>
+    </div>
+</sly>

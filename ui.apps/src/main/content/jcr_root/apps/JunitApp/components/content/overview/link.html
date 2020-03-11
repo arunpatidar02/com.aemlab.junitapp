@@ -1,0 +1,10 @@
+<sly data-sly-template.link="${@ overview}">
+	<div class="cmp-overview__link">
+		<a 	class="cmp-overview__link" 
+			href="${overview.link.lnHref}"
+			title="${overview.link.lnTitle}" 
+			target="${overview.link.lnTarget}">
+			${overview.linkedPageTitle ? overview.linkedPageTitle : overview.link.lnLabel}">
+		</a>
+	</div>
+</sly>

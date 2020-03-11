@@ -1,0 +1,14 @@
+<sly data-sly-template.toplinks="${@ toplinks}">
+    <nav class="cmp-topheader__toplinks">
+        <ul class="cmp-topheader__toplinks--container" data-sly-list.link="${toplinks}">
+            <li class="cmp-topheader__toplink--item">
+                <a class="cmp-topheader__toplink"
+                    href="${link.lnHref}"
+                    title="${link.lnTitle}"
+                    target="${link.lnTarget}" 
+                    >${link.lnLabel}
+                </a>
+            </li>
+        </ul>
+    </nav>
+</sly>

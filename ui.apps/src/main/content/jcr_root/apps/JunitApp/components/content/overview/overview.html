@@ -1,0 +1,10 @@
+<div data-sly-use.overview="com.aemlab.junit.core.models.OverviewModel"
+     data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-use.textTemplate="text.html"
+     data-sly-use.linkTemplate="link.html"
+     data-sly-test.hasContent="${overview.heading || overview.description || !overview.quickLinks.isEmpty}"
+     class="cmp-overview__content">
+    	<sly data-sly-call="${textTemplate.text @ overview=overview}"></sly>
+        <sly data-sly-call="${linkTemplate.link @ overview=overview}"></sly>
+</div>
+<sly data-sly-call="${templates.placeholder @ isEmpty=!hasContent, classAppend='cmp-overview'}"></sly>
