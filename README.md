@@ -1,4 +1,4 @@
-# Sample AEM project - Junit
+# Demo AEM project - Junit
 
 This is a sample project to share/contribute AEM Junit testing knowledge.
 
