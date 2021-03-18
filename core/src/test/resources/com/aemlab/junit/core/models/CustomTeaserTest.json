@@ -9,6 +9,8 @@
          "responsivegrid":{
             "jcr:primaryType":"nt:unstructured",
             "teaser":{
+         	   "sling:resourceType":"JunitApp/components/core/teaser",
+         	   "sling:resourceSuperType":"JunitApp/components/core/teaser",
                "jcr:title":"Test Teaser",
                "fileReference":"/content/dam/core-components-examples/library/sample-assets/lava-into-ocean.jpg",
                "actionsEnabled":"true",
