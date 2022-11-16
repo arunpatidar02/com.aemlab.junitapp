@@ -15,6 +15,9 @@
  */
 package com.aemlab.junit.core.models;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.resource.Resource;
 import org.junit.jupiter.api.BeforeEach;
@@ -22,11 +25,9 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import com.day.cq.wcm.api.Page;
+
 import io.wcm.testing.mock.aem.junit5.AemContext;
 import io.wcm.testing.mock.aem.junit5.AemContextExtension;
-
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * Simple JUnit test verifying the HelloWorldModel
@@ -34,30 +35,30 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @ExtendWith(AemContextExtension.class)
 class HelloWorldModelTest {
 
-    private HelloWorldModel hello;
+	private HelloWorldModel hello;
 
-    private Page page;
-    private Resource resource;
+	private Page page;
+	private Resource resource;
 
-    @BeforeEach
-    public void setup(AemContext context) throws Exception {
+	@BeforeEach
+	public void setup(AemContext context) throws Exception {
 
-        // prepare a page with a test resource
-        page = context.create().page("/content/mypage");
-        resource = context.create().resource(page, "hello",
-            "sling:resourceType", "JunitApp/components/content/helloworld");
+		// prepare a page with a test resource
+		page = context.create().page("/content/mypage");
+		resource = context.create().resource(page, "hello", "sling:resourceType",
+				"JunitApp/components/content/helloworld");
 
-        // create sling model
-        hello = resource.adaptTo(HelloWorldModel.class);
-    }
+		// create sling model
+		hello = resource.adaptTo(HelloWorldModel.class);
+	}
 
-    @Test
-    void testGetMessage() throws Exception {
-        // some very basic junit tests
-        String msg = hello.getMessage();
-        assertNotNull(msg);
-        assertTrue(StringUtils.contains(msg, resource.getResourceType()));
-        assertTrue(StringUtils.contains(msg, page.getPath()));
-    }
+	@Test
+	void testGetMessage() throws Exception {
+		// some very basic junit tests
+		String msg = hello.getMessage();
+		assertNotNull(msg);
+		assertTrue(StringUtils.contains(msg, resource.getResourceType()));
+		assertTrue(StringUtils.contains(msg, page.getPath()));
+	}
 
 }

@@ -7,22 +7,19 @@ import org.apache.sling.api.resource.Resource;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
 
-import com.aemlab.junit.core.models.ModelHelper;
-
 @Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class LinkModel {
 	@Inject
-	public String lnLabel; 
-	
+	public String lnLabel;
+
 	@Inject
 	public String lnHref;
-	
+
 	@Inject
-	public String lnTarget; 
-	
+	public String lnTarget;
+
 	@Inject
 	public String lnTitle;
-
 
 	@PostConstruct
 	protected void init() {

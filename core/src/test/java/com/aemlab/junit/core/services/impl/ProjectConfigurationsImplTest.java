@@ -18,39 +18,39 @@ import junitx.util.PrivateAccessor;
 
 @RunWith(JUnitPlatform.class)
 class ProjectConfigurationsImplTest {
-	
+
 	@InjectMocks
-    private ProjectConfigurationsImpl projBaseConfig = new ProjectConfigurationsImpl();
-    
-    private ProjectConfigurationsImpl.Config config;
+	private ProjectConfigurationsImpl projBaseConfig = new ProjectConfigurationsImpl();
 
-    @BeforeEach
-    void setup() {
-        try {
-            initMock();
-        } catch (NoSuchFieldException | RepositoryException | LoginException e) {
-            System.out.println("Exception::" + e);
-        }
-    }
-    
-    @Test
-    void testGoogleAPI() { 
-        assertEquals("somekey", projBaseConfig.getGoogleAPIKey());
-    }
-    
-    @Test
-    void testOtherAPI() { 
-        assertEquals("somepath", projBaseConfig.getOtherAPI());
-    }
-    
-    private void initMock() throws RepositoryException, NoSuchFieldException, LoginException {
-        new AemContext();
-        config = mock(ProjectConfigurationsImpl.Config.class);
+	private ProjectConfigurationsImpl.Config config;
 
-        PrivateAccessor.setField(projBaseConfig, "config", config);
-        when(config.api_key()).thenReturn("somekey");
-        when(config.other_api()).thenReturn("somepath");
-        projBaseConfig.activate(config);
-    }
+	@BeforeEach
+	void setup() {
+		try {
+			initMock();
+		} catch (NoSuchFieldException | RepositoryException | LoginException e) {
+			System.out.println("Exception::" + e);
+		}
+	}
+
+	@Test
+	void testGoogleAPI() {
+		assertEquals("somekey", projBaseConfig.getGoogleAPIKey());
+	}
+
+	@Test
+	void testOtherAPI() {
+		assertEquals("somepath", projBaseConfig.getOtherAPI());
+	}
+
+	private void initMock() throws RepositoryException, NoSuchFieldException, LoginException {
+		new AemContext();
+		config = mock(ProjectConfigurationsImpl.Config.class);
+
+		PrivateAccessor.setField(projBaseConfig, "config", config);
+		when(config.api_key()).thenReturn("somekey");
+		when(config.other_api()).thenReturn("somepath");
+		projBaseConfig.activate(config);
+	}
 
 }

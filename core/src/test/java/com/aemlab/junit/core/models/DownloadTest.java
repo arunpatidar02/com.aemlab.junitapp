@@ -17,12 +17,13 @@ class DownloadTest {
 
 	@BeforeEach
 	public void setup() throws Exception {
-		 context.load().json(DownloadTest.class.getResourceAsStream("DownloadTest.json"),JunitAppConstants.TEST_PAGE_ROOT);
+		context.load().json(DownloadTest.class.getResourceAsStream("DownloadTest.json"),
+				JunitAppConstants.TEST_PAGE_ROOT);
 	}
-	
+
 	@Test
-	public void testDownload() {
-		Resource r = context.resourceResolver().getResource(JunitAppConstants.TEST_CONTENT_ROOT+"/download");
+	void testDownload() {
+		Resource r = context.resourceResolver().getResource(JunitAppConstants.TEST_CONTENT_ROOT + "/download");
 		assertNotNull(r);
 		Download download = r.adaptTo(Download.class);
 		assertNotNull(download.getHref());

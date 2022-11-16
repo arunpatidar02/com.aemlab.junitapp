@@ -19,12 +19,14 @@ public class ModelHelper {
 
 	private static final Logger log = LoggerFactory.getLogger(ModelHelper.class);
 
+	private ModelHelper() {
+		throw new IllegalStateException("ModelHelper class object's can't be instantiated");
+	}
+
 	/**
 	 * @param resource
-	 * @param modelClass
-	 *            class of the model
-	 * @param <T>
-	 *            type of class of the model
+	 * @param modelClass class of the model
+	 * @param <T>        type of class of the model
 	 * @return List of models retrieved from the children of the input resource
 	 */
 	public static <T> List<T> getChildrenModels(final Resource resource, Class<T> modelClass) {
@@ -44,8 +46,7 @@ public class ModelHelper {
 
 	/**
 	 * @param <T>
-	 * @param strings
-	 *            array object
+	 * @param strings array object
 	 * @return List of object values
 	 */
 	@SuppressWarnings("unchecked")
@@ -57,8 +58,7 @@ public class ModelHelper {
 	}
 
 	/**
-	 * @param string
-	 *            url
+	 * @param string url
 	 * @return string Formatted url
 	 */
 	public static String getLink(String url) {
@@ -79,10 +79,8 @@ public class ModelHelper {
 	/**
 	 * Method reads design dialog property and sets it.
 	 *
-	 * @param resource
-	 *            - resource
-	 * @param propertyName
-	 *            - propertyName
+	 * @param resource     - resource
+	 * @param propertyName - propertyName
 	 * @return <b>String</b> - property value or <b>null</b>
 	 */
 	public static String getDesignPropertyValue(Resource resource, String propertyName, String defaultValue) {

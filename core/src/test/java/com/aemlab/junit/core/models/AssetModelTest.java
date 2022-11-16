@@ -19,16 +19,16 @@ class AssetModelTest {
 
 	@BeforeEach
 	public void setup() throws Exception {
-		 context.load().json(AssetModelTest.class.getResourceAsStream("AssetModelTest.json"),JunitAppConstants.TEST_DAM_ROOT);
+		context.load().json(AssetModelTest.class.getResourceAsStream("AssetModelTest.json"),
+				JunitAppConstants.TEST_DAM_ROOT);
 	}
-	
+
 	@Test
 	void testTargetNull() {
-		Resource r = context.resourceResolver().getResource(JunitAppConstants.TEST_DAM_ROOT+"/asset.zip");
+		Resource r = context.resourceResolver().getResource(JunitAppConstants.TEST_DAM_ROOT + "/asset.zip");
 		assertNotNull(r);
 		Asset asset = r.adaptTo(Asset.class);
 		assertNotNull(asset);
 	}
-
 
 }

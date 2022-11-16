@@ -19,12 +19,13 @@ class LinkModelTest {
 
 	@BeforeEach
 	public void setup() throws Exception {
-		 context.load().json(LinkModelTest.class.getResourceAsStream("LinkModelTest.json"),JunitAppConstants.TEST_PAGE_ROOT);
+		context.load().json(LinkModelTest.class.getResourceAsStream("LinkModelTest.json"),
+				JunitAppConstants.TEST_PAGE_ROOT);
 	}
-	
+
 	@Test
-	public void testTargetNull() {
-		Resource r = context.resourceResolver().getResource(JunitAppConstants.TEST_CONTENT_ROOT+"/links/link0");
+	void testTargetNull() {
+		Resource r = context.resourceResolver().getResource(JunitAppConstants.TEST_CONTENT_ROOT + "/links/link0");
 		assertNotNull(r);
 		LinkModel linkModel = r.adaptTo(LinkModel.class);
 		assertNotNull(linkModel.getLnHref());
@@ -33,8 +34,8 @@ class LinkModelTest {
 	}
 
 	@Test
-	public void testTargetBlank() {
-		Resource r = context.resourceResolver().getResource(JunitAppConstants.TEST_CONTENT_ROOT+"/links/link1");
+	void testTargetBlank() {
+		Resource r = context.resourceResolver().getResource(JunitAppConstants.TEST_CONTENT_ROOT + "/links/link1");
 		assertNotNull(r);
 		LinkModel linkModel = r.adaptTo(LinkModel.class);
 		assertNotNull(linkModel.getLnTitle());
@@ -43,8 +44,8 @@ class LinkModelTest {
 	}
 
 	@Test
-	public void testTargetHrefNull() {
-		Resource r = context.resourceResolver().getResource(JunitAppConstants.TEST_CONTENT_ROOT+"/links/link2");
+	void testTargetHrefNull() {
+		Resource r = context.resourceResolver().getResource(JunitAppConstants.TEST_CONTENT_ROOT + "/links/link2");
 		assertNotNull(r);
 		LinkModel linkModel = r.adaptTo(LinkModel.class);
 		assertNull(linkModel.getLnTarget());

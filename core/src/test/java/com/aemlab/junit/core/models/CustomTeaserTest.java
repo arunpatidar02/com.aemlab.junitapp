@@ -42,7 +42,7 @@ class CustomTeaserTest {
 
 		}
 
-		//assertNotNull(teaser);
+		// assertNotNull(teaser);
 	}
 
 }
