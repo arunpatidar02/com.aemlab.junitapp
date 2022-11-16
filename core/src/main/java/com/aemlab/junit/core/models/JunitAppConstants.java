@@ -8,6 +8,7 @@ public final class JunitAppConstants {
 
     public static final String READ_SUB_SERVICE = "readService";
     public static final String TEST_PAGE_ROOT = "/content/JunitApp/us/en";
+    public static final String TEST_DAM_ROOT = "/content/dam/JunitApp";
     public static final String TEST_CONTENT_ROOT = JunitAppConstants.TEST_PAGE_ROOT + "/jcr:content/root/responsivegrid";
     public static final String TEST_PAGE_ROOT2 = "/content/JunitApp/us/de";
     public static final String TEST_CONTENT_ROOT2 = JunitAppConstants.TEST_PAGE_ROOT2 + "/jcr:content/root/responsivegrid";
