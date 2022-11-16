@@ -1,0 +1,40 @@
+{
+    "jcr:primaryType": "sling:Folder",
+    "asset.zip":
+    {
+        "jcr:primaryType": "dam:Asset",
+        "jcr:mixinTypes": [
+            "mix:referenceable"
+        ],
+        "jcr:content":
+        {
+            "jcr:primaryType": "dam:AssetContent",
+            "dam:assetState": "processing",
+            "renditions":
+            {
+                "jcr:primaryType": "nt:folder",
+                "original":
+                {
+                    "jcr:primaryType": "nt:file",
+                    "jcr:content":
+                    {
+                        "jcr:primaryType": "oak:Resource",
+                        "jcr:mimeType": "application/zip",
+                        ":jcr:data": 13721771
+                    }
+                }
+            },
+            "related":
+            {
+                "jcr:primaryType": "nt:unstructured"
+            },
+            "metadata":
+            {
+                "jcr:primaryType": "nt:unstructured",
+                "jcr:mixinTypes": [
+                    "cq:Taggable"
+                ]
+            }
+        }
+    }
+}
